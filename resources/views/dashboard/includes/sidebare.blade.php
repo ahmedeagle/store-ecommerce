@@ -101,16 +101,16 @@
 
 
             <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
-                                                                                    data-i18n="nav.templates.main"> الاعدادات</span></a>
+                                                                                    data-i18n="nav.templates.main"> {{__('admin/sidebar.settings')}}</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main"> وسائل التوصيل </a>
+                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main"> {{__('admin/sidebar.shipping methods')}} </a>
                         <ul class="menu-content">
-                            <li><a class="menu-item" href="../vertical-menu-template"
+                            <li><a class="menu-item" href="{{route('edit.shippings.methods','free')}}"
                                    data-i18n="nav.templates.vert.classic_menu">توصيل مجاني </a>
                             </li>
-                            <li><a class="menu-item" href="../vertical-modern-menu-template">  توصيل داخلي </a>
+                            <li><a class="menu-item" href="{{route('edit.shippings.methods','inner')}}">  توصيل داخلي </a>
                             </li>
-                            <li><a class="menu-item" href="../vertical-compact-menu-template"
+                            <li><a class="menu-item" href="{{route('edit.shippings.methods','outer')}}"
                                    data-i18n="nav.templates.vert.compact_menu">  توصيل خارجي </a>
                             </li>
                         </ul>
