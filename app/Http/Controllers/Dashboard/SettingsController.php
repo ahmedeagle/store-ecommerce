@@ -14,7 +14,10 @@ class SettingsController extends Controller
         //free , inner , outer for shipping methods
 
         if ($type === 'free')
-            $shippingMethod = Setting::where('key', 'free_shipping_label')->first();
+              $shippingMethod = Setting::where('key', 'free_shipping_label')->first();
+
+
+
 
         elseif ($type === 'inner')
             $shippingMethod = Setting::where('key', 'local_label')->first();
@@ -25,12 +28,17 @@ class SettingsController extends Controller
         else
             $shippingMethod = Setting::where('key', 'free_shipping_label')->first();
 
-        return view('dasboard.settings.shippings.edit',compact('shippingMethod'));
+
+        return view('dashboard.settings.shippings.edit',compact('shippingMethod'));
 
     }
 
 
     public function updateShippingMethods(Request $request , $id){
 
+
+        //validation
+
+        //update db
     }
 }
