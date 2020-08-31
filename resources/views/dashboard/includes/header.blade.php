@@ -1,4 +1,3 @@
-
 <nav
     class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light bg-info navbar-shadow">
     <div class="navbar-wrapper">
@@ -35,14 +34,34 @@
                   <span
                       class="user-name text-bold-700">  {{auth('admin') -> user() -> name}}</span>
                 </span>
-                            <span class="avatar avatar-online">
-                  <img  style="height: 35px;" src="" alt="avatar"><i></i></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href=""><i
+                         </a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{route('edit.profile')}}"><i
                                     class="ft-user"></i> تعديل الملف الشحصي </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{route('admin.logout')}}"><i class="ft-power"></i> تسجيل
                                 الخروج </a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown dropdown-user nav-item">
+                        <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                <span class="mr-1">
+                  <span
+                      class="user-name text-bold-700">  {{App::getLocale()}}</span>
+                </span>
+
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
+                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+                                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                            @endforeach
                         </div>
                     </li>
 
