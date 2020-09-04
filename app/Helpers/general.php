@@ -1,6 +1,9 @@
 <?php
 
- function getFolder(){
+define('PAGINATION_COUNT', 15);
 
-     return app() -> getLocale() == 'ar' ? 'css-rtl' : 'css';
+function getFolder()
+{
+
+    return app()->getLocale() == 'ar' ? 'css-rtl' : 'css';
 }

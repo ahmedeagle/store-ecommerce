@@ -20,10 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/profile/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SubCategoriesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/SubCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/SubCategoryDatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_29_222100_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_29_222100_create_categories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -155,16 +164,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\profile" />
-      <recent name="C:\wamp64\www\ecommerce\resources\lang\en" />
-      <recent name="C:\wamp64\www\ecommerce\resources\lang\ar\admin" />
-      <recent name="C:\wamp64\www\ecommerce\public\assets\admin\css" />
-      <recent name="C:\wamp64\www\ecommerce\app\Helpers" />
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
+      <recent name="C:\wamp64\www\ecommerce\database\seeds" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard" />
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Dashboard" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\categories" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,7 +200,11 @@
       <workItem from="1598738774499" duration="3013000" />
       <workItem from="1598773661130" duration="1218000" />
       <workItem from="1598881451518" duration="598000" />
-      <workItem from="1598899247360" duration="591000" />
+      <workItem from="1598899247360" duration="7863000" />
+      <workItem from="1598972418292" duration="636000" />
+      <workItem from="1598988218361" duration="1182000" />
+      <workItem from="1599040048515" duration="583000" />
+      <workItem from="1599221141383" duration="12518000" />
     </task>
     <servers />
   </component>
