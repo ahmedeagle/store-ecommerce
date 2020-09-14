@@ -10,5 +10,6 @@ $factory->define(Category::class, function (Faker $faker) {
         'name' => $faker->word(),
         'slug' => $faker->slug(),
         'is_active' => $faker->boolean(),
+
     ];
 });
