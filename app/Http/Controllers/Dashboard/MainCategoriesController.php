@@ -13,15 +13,15 @@ class MainCategoriesController extends Controller
 
     public function index()
     {
-        $categories = Category::parent()->orderBy('id','DESC') -> paginate(PAGINATION_COUNT);
+        $categories = Category::with('_parent')->orderBy('id','DESC') -> paginate(PAGINATION_COUNT);
         return view('dashboard.categories.index', compact('categories'));
     }
 
     public function create()
     {
-        return view('dashboard.categories.create');
+         $categories =   Category::select('id','parent_id')->get();
+        return view('dashboard.categories.create',compact('categories'));
     }
-
 
     public function store(MainCategoryRequest $request)
     {
@@ -36,6 +36,16 @@ class MainCategoriesController extends Controller
                 $request->request->add(['is_active' => 0]);
             else
                 $request->request->add(['is_active' => 1]);
+
+            //if user choose main category then we must remove paret id from the request
+
+            if($request -> type == 1) //main category
+            {
+                $request->request->add(['parent_id' => null]);
+            }
+
+            //if he choose child category we mus t add parent id
+
 
             $category = Category::create($request->except('_token'));
 
