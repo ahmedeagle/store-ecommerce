@@ -88,7 +88,7 @@
             </li>
 
             <li class="nav-item"><a href=""><i class="la la-male"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
+                    <span class="menu-title" data-i18n="nav.dash.main">المنتجات  </span>
                     <span
                         class="badge badge badge-success badge-pill float-right mr-2"> </span>
                 </a>
@@ -96,8 +96,8 @@
                     <li class="active"><a class="menu-item" href=" "
                                           data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                     </li>
-                    <li><a class="menu-item" href=" " data-i18n="nav.dash.crypto">أضافة
-                            متجر  </a>
+                    <li><a class="menu-item" href="{{route('admin.products.general.create')}}" data-i18n="nav.dash.crypto">أضافة
+                            منتج جديد   </a>
                     </li>
                 </ul>
             </li>

@@ -4,27 +4,33 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Http\Enumerations\CategoryType;
+use App\Http\Requests\GeneralProductRequest;
 use App\Http\Requests\MainCategoryRequest;
+use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use DB;
 
-class MainCategoriesController extends Controller
+class ProductsController extends Controller
 {
 
     public function index()
     {
-        $categories = Category::with('_parent')->orderBy('id','DESC') -> paginate(PAGINATION_COUNT);
-        return view('dashboard.categories.index', compact('categories'));
     }
 
     public function create()
     {
-         $categories =   Category::select('id','parent_id')->get();
-        return view('dashboard.categories.create',compact('categories'));
+       $data=[];
+        $data['brands']  = Brand::active() -> select('id') -> get();
+        $data['tags']  = Tag::select('id') -> get();
+        $data['categories']  = Category::active() -> select('id') -> get();
+
+
+        return view('dashboard.products.general.create',$data);
     }
 
-    public function store(MainCategoryRequest $request)
+    public function store(GeneralProductRequest $request)
     {
 
         try {
