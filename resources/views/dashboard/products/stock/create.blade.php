@@ -1,4 +1,3 @@
-
 @extends('layouts.admin')
 @section('content')
 
@@ -11,9 +10,10 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">الرئيسية </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href=""> الاقسام الرئيسية </a>
+                                <li class="breadcrumb-item"><a href="">
+                                        المنتجات </a>
                                 </li>
-                                <li class="breadcrumb-item active"> تعديل - {{$category -> name}}
+                                <li class="breadcrumb-item active"> أضافه منتج
                                 </li>
                             </ol>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> تعديل قسم رئيسي </h4>
+                                    <h4 class="card-title" id="basic-layout-form"> أضافة منتج جديد </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -44,89 +44,89 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.maincategories.update',$category -> id)}}"
+                                              action="{{route('admin.products.stock.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
 
-                                            <input name="id" value="{{$category -> id}}" type="hidden">
-
-                                            <div class="form-group">
-                                                <div class="text-center">
-                                                    <img
-                                                        src=""
-                                                        class="rounded-circle  height-150" alt="صورة القسم  ">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="form-group">
-                                                <label> صوره القسم </label>
-                                                <label id="projectinput7" class="file center-block">
-                                                    <input type="file" id="file" name="photo">
-                                                    <span class="file-custom"></span>
-                                                </label>
-                                                @error('photo')
-                                                <span class="text-danger">{{$message}}</span>
-                                                @enderror
-                                            </div>
-
+                                            <input type="hidden" name="product_id" value="{{$id}}">
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> بيانات القسم </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> اداره المستودع   </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> اسم القسم
-                                                                 </label>
-                                                            <input type="text" id="name"
-                                                                   class="form-control"
-                                                                   placeholder="  "
-                                                                   value="{{$category -> name}}"
-                                                                   name="name">
-                                                            @error("name")
-                                                            <span class="text-danger">{{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1"> اسم بالرابط
+                                                            <label for="projectinput1"> كود  المنتج
                                                             </label>
-                                                            <input type="text" id="name"
+                                                            <input type="text" id="sku"
                                                                    class="form-control"
                                                                    placeholder="  "
-                                                                   value="{{$category -> slug}}"
-                                                                   name="slug">
-                                                            @error("slug")
+                                                                   value="{{old('sku')}}"
+                                                                   name="sku">
+                                                            @error("sku")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
                                                     </div>
 
-
-
-
-
-                                                </div>
-                                                <div class="row">
                                                     <div class="col-md-6">
-                                                        <div class="form-group mt-1">
-                                                            <input type="checkbox" value="1"
-                                                                   name="is_active"
-                                                                   id="switcheryColor4"
-                                                                   class="switchery" data-color="success"
-                                                                   @if($category -> is_active == 1)checked @endif/>
-                                                            <label for="switcheryColor4"
-                                                                   class="card-title ml-1">الحالة  </label>
-
-                                                            @error("is_active")
-                                                            <span class="text-danger">{{$message }}</span>
+                                                        <div class="form-group">
+                                                            <label for="projectinput1">تتبع المستودع
+                                                            </label>
+                                                            <select name="manage_stock" class="select2 form-control" id="manageStock">
+                                                                <optgroup label="من فضلك أختر النوع ">
+                                                                    <option value="1">اتاحة التتبع</option>
+                                                                    <option value="0" selected>عدم اتاحه التتبع</option>
+                                                                </optgroup>
+                                                            </select>
+                                                            @error('manage_stock')
+                                                            <span class="text-danger"> {{$message}}</span>
                                                             @enderror
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="row">
+                                                  <!-- QTY  -->
+
+
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput1">حالة المنتج
+                                                            </label>
+                                                            <select name="in_stock" class="select2 form-control" >
+                                                                <optgroup label="من فضلك أختر  ">
+                                                                    <option value="1">متاح</option>
+                                                                    <option value="0">غير متاح </option>
+                                                                </optgroup>
+                                                            </select>
+                                                            @error('in_stock')
+                                                            <span class="text-danger"> {{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-md-6" style="display:none"  id="qtyDiv">
+                                                        <div class="form-group">
+                                                            <label for="projectinput1">الكمية
+                                                            </label>
+                                                            <input type="text" id="sku"
+                                                                   class="form-control"
+                                                                   placeholder="  "
+                                                                   value="{{old('qty')}}"
+                                                                   name="qty">
+                                                            @error("qty")
+                                                            <span class="text-danger">{{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
                                             </div>
 
 
@@ -152,4 +152,17 @@
         </div>
     </div>
 
+@stop
+
+@section('script')
+
+    <script>
+        $(document).on('change','#manageStock',function(){
+           if($(this).val() == 1 ){
+                $('#qtyDiv').show();
+           }else{
+               $('#qtyDiv').hide();
+           }
+        });
+    </script>
     @stop

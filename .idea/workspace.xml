@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProductPriceValidation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProductStockRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/stock/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/index.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +37,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -157,17 +161,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/products/general" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../emr" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\products\general" />
-      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\products" />
       <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\products" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\products\prices" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\products\general" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard" />
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Dashboard" />
     </key>
   </component>
   <component name="RunManager">
@@ -176,7 +181,10 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="" />
@@ -209,23 +217,31 @@
       <workItem from="1601239105341" duration="894000" />
       <workItem from="1601403045796" duration="1903000" />
       <workItem from="1601408312254" duration="1904000" />
+      <workItem from="1601577206981" duration="4036000" />
+      <workItem from="1601581691554" duration="1635000" />
+      <workItem from="1601583613496" duration="1619000" />
+      <workItem from="1601585468975" duration="1070000" />
+      <workItem from="1601734390444" duration="14000" />
+      <workItem from="1601735876650" duration="18000" />
+      <workItem from="1601737036907" duration="7901000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1598617808483">
@@ -236,26 +252,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="397" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1600524676989" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600522532077">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601745065475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600522532077" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598468507131">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1601745065475" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1601744307431">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598468507131" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601744307431" />
     <state x="459" y="86" key="NewPhpClassDialog" timestamp="1600524712059">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="459" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1600524712059" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1598482090656">
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1601737036949">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1598482090656" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600464111260">
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1601737036949" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1601738297873">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600464111260" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1601738297873" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1601738455922">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601738455922" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
