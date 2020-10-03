@@ -106,12 +106,12 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> الوصف المختصر
                                                             </label>
-                                                            <textarea  name="short-description" id="short-description"
+                                                            <textarea  name="short_description" id="short-description"
                                                                        class="form-control"
                                                                        placeholder=""
-                                                            >{{old('short-description')}}</textarea>
+                                                            >{{old('short_description')}}</textarea>
 
-                                                            @error("short-description")
+                                                            @error("short_description")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
@@ -144,7 +144,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> اختر ألعلامات الدلالية
                                                             </label>
-                                                            <select name="tags" class="select2 form-control" multiple>
+                                                            <select name="tags[]" class="select2 form-control" multiple>
                                                                 <optgroup label=" اختر ألعلامات الدلالية ">
                                                                     @if($tags && $tags -> count() > 0)
                                                                         @foreach($tags as $tag)

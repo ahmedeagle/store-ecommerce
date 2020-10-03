@@ -49,35 +49,32 @@
                                             <thead class="">
                                             <tr>
                                                 <th>الاسم </th>
-                                                <th>القسم الرئيسي </th>
                                                 <th> الاسم بالرابط </th>
                                                 <th>الحالة</th>
-                                                <th>صوره القسم</th>
+                                                <th>السعر</th>
                                                 <th>الإجراءات</th>
                                             </tr>
                                             </thead>
                                             <tbody>
 
-                                            @isset($categories)
-                                                @foreach($categories as $category)
+                                            @isset($products)
+                                                @foreach($products as $product)
                                                     <tr>
-                                                        <td>{{$category -> name}}</td>
-                                                        <td>{{$category -> _parent -> name  ?? '--' }}</td>
-                                                        <td>{{$category -> slug}}</td>
-                                                        <td>{{$category -> getActive()}}</td>
-                                                        <td> <img style="width: 150px; height: 100px;" src=" "></td>
+                                                        <td>{{$product -> name}}</td>
+                                                         <td>{{$product -> slug}}</td>
+                                                        <td>{{$product -> getActive()}}</td>
+                                                        <td>{{$product -> price}}</td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
-                                                                <a href="{{route('admin.maincategories.edit',$category -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">تعديل</a>
+                                                                <a href="{{route('admin.products.price',$product -> id)}}"
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">السعر</a>
 
+                                                                <a href=""
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">الصور</a>
 
-                                                                <a href="{{route('admin.maincategories.delete',$category -> id)}}"
-                                                                   class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">حذف</a>
-
-
-
+                                                                <a href="{{route('admin.products.stock',$product -> id)}}"
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">المستودع</a>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -95,6 +92,7 @@
                             </div>
                         </div>
                     </div>
+                    {!! $products -> links() !!}
                 </section>
             </div>
         </div>

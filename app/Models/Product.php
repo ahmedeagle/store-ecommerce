@@ -85,6 +85,10 @@ class Product extends Model
         return $this->belongsTo(Brand::class)->withDefault();
     }
 
+    public function getActive(){
+        return  $this -> is_active  == 0 ?  'غير مفعل'   : 'مفعل' ;
+    }
+
     public function categories()
     {
         return $this->belongsToMany(Category::class, 'product_categories');
