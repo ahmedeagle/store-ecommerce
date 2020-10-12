@@ -106,6 +106,26 @@ class ProductsController extends Controller
 
     }
 
+    public function addImages($product_id){
+        return view('dashboard.products.images.create')->withId($product_id);
+    }
+
+    //to save images to folder only
+    public function saveProductImages(Request $request ){
+
+        $file = $request->file('dzfile');
+        $filename = uploadImage('products', $file);
+
+        return response()->json([
+            'name' => $filename,
+            'original_name' => $file->getClientOriginalName(),
+        ]);
+
+    }
+
+    public function saveProductImagesDB(Request $request){
+        return $request;
+    }
     public function edit($id)
     {
 
