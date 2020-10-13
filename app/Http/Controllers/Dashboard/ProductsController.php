@@ -6,10 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Enumerations\CategoryType;
 use App\Http\Requests\GeneralProductRequest;
 use App\Http\Requests\MainCategoryRequest;
+use App\Http\Requests\ProductImagesRequest;
 use App\Http\Requests\ProductPriceValidation;
 use App\Http\Requests\ProductStockRequest;
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Product;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -123,8 +125,24 @@ class ProductsController extends Controller
 
     }
 
-    public function saveProductImagesDB(Request $request){
-        return $request;
+    public function saveProductImagesDB(ProductImagesRequest $request){
+
+        try {
+            // save dropzone images
+            if ($request->has('document') && count($request->document) > 0) {
+                foreach ($request->document as $image) {
+                    Image::create([
+                        'product_id' => $request->product_id,
+                        'photo' => $image,
+                    ]);
+                }
+            }
+
+            return redirect()->route('admin.products')->with(['success' => 'تم التحديث بنجاح']);
+
+        }catch(\Exception $ex){
+
+        }
     }
     public function edit($id)
     {
