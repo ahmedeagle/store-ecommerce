@@ -24,7 +24,7 @@ class Option extends Model
      *
      * @var array
      */
-    protected $fillable = ['attribute_id', 'product_id'];
+    protected $fillable = ['attribute_id', 'product_id','price'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -36,5 +36,9 @@ class Option extends Model
     public function product()
     {
         return $this->belongsTo(Product::class, 'product_id');
+    }
+
+    public function attribute(){
+        return $this -> belongsTo(Attribute::class,'attribute_id');
     }
 }
