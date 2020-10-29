@@ -113,7 +113,7 @@ Route::group([
         ################################## end attributes    #######################################
 
         ################################## brands options ######################################
-        Route::group(['prefix' => 'attributes'], function () {
+        Route::group(['prefix' => 'options'], function () {
             Route::get('/','OptionsController@index') -> name('admin.options');
             Route::get('create','OptionsController@create') -> name('admin.options.create');
             Route::post('store','OptionsController@store') -> name('admin.options.store');

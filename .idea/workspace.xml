@@ -20,17 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/AttributesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AttributeRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Attribute.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/AttributeTranslation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Option.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/OptionTranslation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Rules/UniqueAttributeName.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/OptionsRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Option.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Option.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,15 +164,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommerce\public\assets\admin\js\scripts\extensions" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Dashboard" />
-      <recent name="C:\wamp64\www\ecommerce\app\Models" />
-      <recent name="C:\wamp64\www\ecommerce\app\Rules" />
       <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard" />
+      <recent name="C:\wamp64\www\ecommerce\app\Models" />
+      <recent name="C:\wamp64\www\ecommerce\app\Rules" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommerce\public\assets\admin\js\scripts\extensions" />
     </key>
   </component>
   <component name="RunManager">
@@ -240,7 +234,8 @@
       <workItem from="1603610564520" duration="623000" />
       <workItem from="1603736312474" duration="2207000" />
       <workItem from="1603866108669" duration="1789000" />
-      <workItem from="1603913317440" duration="714000" />
+      <workItem from="1603913317440" duration="2508000" />
+      <workItem from="1603971727160" duration="5540000" />
     </task>
     <servers />
   </component>
@@ -285,10 +280,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="459" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1600524712059" />
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1603913386595">
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1603971758547">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1603913386595" />
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1603971758547" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1603564781363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -310,6 +305,11 @@
           <url>file://$PROJECT_DIR$/routes/admin.php</url>
           <line>82</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/dashboard/options/create.blade.php</url>
+          <line>56</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
