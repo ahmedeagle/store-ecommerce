@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 route::get('/',function(){
     return view('front.home');
-});
+}) -> name('home');
 
 
 Route::group([
@@ -33,8 +33,7 @@ Route::group([
 
             //guest  user
 
-        Route::get('login', 'LoginController@login')->name('login');
-        Route::post('login', 'LoginController@postLogin')->name('post.login');
+
 
     });
 

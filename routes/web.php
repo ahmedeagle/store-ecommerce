@@ -21,3 +21,7 @@ Route::get('test', function () {
 
      return $category;
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
