@@ -13,3 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+route::get('/',function(){
+    return view('front.home');
+}) -> name('home');
+
+
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+], function () {
+
+    Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
+                    // must be authenticated user
+    });
+
+    Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
+
+            //guest  user
+
+
+
+    });
+
+});

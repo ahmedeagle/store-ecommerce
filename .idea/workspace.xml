@@ -20,12 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/OptionsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/OptionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Option.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Option.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +157,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-enum" />
       <path value="$PROJECT_DIR$/vendor/spatie/enum" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gWD13Kx3jyrD2BKhoNIvmz71LN" />
@@ -160,18 +169,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Site" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Dashboard" />
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
-      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard" />
-      <recent name="C:\wamp64\www\ecommerce\app\Models" />
-      <recent name="C:\wamp64\www\ecommerce\app\Rules" />
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
+      <recent name="C:\wamp64\www\ecommerce\public\assets\front" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\site" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\site\includes" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommerce\public\assets\front\css" />
       <recent name="C:\wamp64\www\ecommerce\public\assets\admin\js\scripts\extensions" />
     </key>
   </component>
@@ -236,6 +246,18 @@
       <workItem from="1603866108669" duration="1789000" />
       <workItem from="1603913317440" duration="2508000" />
       <workItem from="1603971727160" duration="5540000" />
+      <workItem from="1604069293350" duration="429000" />
+      <workItem from="1604431093184" duration="1504000" />
+      <workItem from="1604432828688" duration="1699000" />
+      <workItem from="1604434749984" duration="503000" />
+      <workItem from="1604674464758" duration="605000" />
+      <workItem from="1604687026679" duration="8605000" />
+      <workItem from="1604774990464" duration="662000" />
+      <workItem from="1604902383338" duration="3251000" />
+      <workItem from="1605039422671" duration="6008000" />
+      <workItem from="1605119364928" duration="296000" />
+      <workItem from="1605120114917" duration="4195000" />
+      <workItem from="1605124759321" duration="3832000" />
     </task>
     <servers />
   </component>
@@ -280,10 +302,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="459" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1600524712059" />
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1603971758547">
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1605124758220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1603971758547" />
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1605124758220" />
+    <state x="24" y="45" width="1052" height="715" key="dock-window-1" timestamp="1604691768827">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="24" y="45" width="1052" height="715" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1604691768827" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1603564781363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
