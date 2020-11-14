@@ -27,14 +27,16 @@ Route::group([
 
     Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
                     // must be authenticated user
+
+        Route::get('profile',function(){
+
+            return 'You Are Authenticated ';
+        });
     });
 
     Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
 
             //guest  user
-
-
-
     });
 
 });
