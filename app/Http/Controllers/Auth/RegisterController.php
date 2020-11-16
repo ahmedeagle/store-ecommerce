@@ -70,7 +70,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
         try {
 
              DB::beginTransaction();
@@ -82,21 +81,16 @@ class RegisterController extends Controller
             ]);
 
             // send OTP SMS code
-
             // set/ generate new code
-
             $verification['user_id'] = $user->id;
             $verification_data =  $this->sms_services->setVerificationCode($verification);
             $message = $this->sms_services->getSMSVerifyMessageByAppName($verification_data -> code );
             //save this code in verifcation table
               //done
-
-
              //send code to user mobile by sms gateway   // note  there are no gateway credentails in config file
              # app(VictoryLinkSms::class) -> sendSms($user -> mobile,$message);
-
             DB::commit();
-
+            return  $user;
         //send to user  mobile
         }catch(\Exception $ex){
             DB::rollback();

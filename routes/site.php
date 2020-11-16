@@ -25,8 +25,8 @@ Route::group([
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
 
-    Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
-                    // must be authenticated user
+    Route::group(['namespace' => 'Site', 'middleware' => ['auth' ,'VerifiedUser']], function () {
+                    // must be authenticated user and verified
 
         Route::get('profile',function(){
 
@@ -34,9 +34,21 @@ Route::group([
         });
     });
 
+    Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
+        // must be authenticated user
+
+        Route::post('verify-user/', 'VerificationCodeController@verify') -> name('verify-user');
+
+
+    });
+
     Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
 
             //guest  user
     });
-
+    Route::get('verify',function (){
+        return view('auth.verification');
+    });
 });
+
+
