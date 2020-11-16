@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/VerificationCodeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/VerificationRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/verification.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/VerificationServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/VerificationServices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,20 +178,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Services/SMSGateways" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommerce\public\assets\front\css" />
-      <recent name="C:\wamp64\www\ecommerce\public\assets\admin\js\scripts\extensions" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Auth" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\auth" />
       <recent name="C:\wamp64\www\ecommerce\app\Http\Services\SMSGateways" />
       <recent name="C:\wamp64\www\ecommerce\app\Http\Services" />
-      <recent name="C:\wamp64\www\ecommerce\app\Models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
-      <recent name="C:\wamp64\www\ecommerce\public\assets\front" />
+      <recent name="C:\wamp64\www\ecommerce\public\assets\front\css" />
+      <recent name="C:\wamp64\www\ecommerce\public\assets\admin\js\scripts\extensions" />
     </key>
   </component>
   <component name="RunManager">
@@ -261,7 +270,7 @@
       <workItem from="1605124759321" duration="4624000" />
       <workItem from="1605355876308" duration="603000" />
       <workItem from="1605357165267" duration="11922000" />
-      <workItem from="1605553781589" duration="451000" />
+      <workItem from="1605553781589" duration="6050000" />
     </task>
     <servers />
   </component>
@@ -294,10 +303,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="354" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1603563115582" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605368141325">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605558922377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605368141325" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605558922377" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1603619337855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
