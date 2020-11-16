@@ -5,8 +5,7 @@ namespace App\Http\Services\SMSGateways;
 
 
 use GuzzleHttp\Client;
-use TruHealth\Enums\Sms\VictoryLinkSmsStatusCodesEnum;
-use TruHealth\Interfaces\Sms\SmsInterface;
+
 
 class VictoryLinkSms
 {
