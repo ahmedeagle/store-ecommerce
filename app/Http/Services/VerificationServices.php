@@ -25,9 +25,7 @@ class VerificationServices
     public function getSMSVerifyMessageByAppName( $code)
     {
             $message = " is your verification code for your account";
-
-
-        return $code.$message;
+             return $code.$message;
     }
 
 
@@ -44,6 +42,12 @@ class VerificationServices
             }
         }
         return false ;
+    }
+
+
+    public function removeOTPCode($code)
+    {
+        User_verfication::where('code',$code) -> delete();
     }
 
 }

@@ -90,7 +90,7 @@
             <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">المنتجات  </span>
                     <span
-                        class="badge badge badge-success badge-pill float-right mr-2"> </span>
+                        class="badge badge badge-success badge-pill float-right mr-2"> {{\App\Models\Product::count()}}</span>
                 </a>
                 <ul class="menu-content">
                     <li class="active"><a class="menu-item" href="{{route('admin.products')}}"
@@ -106,7 +106,7 @@
             <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">خصائص المنتج  </span>
                     <span
-                        class="badge badge badge-success badge-pill float-right mr-2"> </span>
+                        class="badge badge badge-success badge-pill float-right mr-2">{{\App\Models\Option::count()}} </span>
                 </a>
                 <ul class="menu-content">
                     <li class="active"><a class="menu-item" href="{{route('admin.attributes')}}"
@@ -120,8 +120,6 @@
 
             <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">قيم الخصائص </span>
-                    <span
-                        class="badge badge badge-success badge-pill float-right mr-2"> </span>
                 </a>
                 <ul class="menu-content">
                     <li class="active"><a class="menu-item" href="{{route('admin.options')}}"
@@ -132,37 +130,6 @@
                     </li>
                 </ul>
             </li>
-
-
-            <li class="nav-item"><a href=""><i class="la la-male"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">الطلاب  </span>
-                    <span
-                        class="badge badge badge-warning  badge-pill float-right mr-2"></span>
-                </a>
-                <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href=""
-                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
-                    </li>
-                    <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
-                            طالب </a>
-                    </li>
-                </ul>
-            </li>
-
-
-            <li class="nav-item">
-                <a href=""><i class="la la-male"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">تذاكر المراسلات   </span>
-                    <span
-                        class="badge badge badge-danger  badge-pill float-right mr-2">0</span>
-                </a>
-                <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href=""
-                                          data-i18n="nav.dash.ecommerce"> تذاكر الطلاب </a>
-                    </li>
-                </ul>
-            </li>
-
 
             <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
                                                                                     data-i18n="nav.templates.main"> {{__('admin/sidebar.settings')}}</span></a>
@@ -181,6 +148,17 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li><a class="menu-item" href="#"
+                           data-i18n="nav.templates.vert.main"> {{__('admin/sidebar.main slider')}} </a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" href="{{route('admin.sliders.create')}}"
+                                   data-i18n="nav.templates.vert.classic_menu">صور الاسليدر </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
                 </ul>
             </li>
             <li class=" navigation-header">
