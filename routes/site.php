@@ -13,42 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-route::get('/',function(){
-    return view('front.home');
-}) -> name('home');
-
-
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
 
-    Route::group(['namespace' => 'Site', 'middleware' => ['auth' ,'VerifiedUser']], function () {
+
+
+    Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
+        //guest  user
+        route::get('/','HomeController@home') -> name('home') -> middleware('VerifiedUser');
+        route::get('category/{slug}','CategoryController@productsBySlug') ->name('category');
+
+    });
+
+
+    Route::group(['namespace' => 'Site', 'middleware' => ['auth','VerifiedUser']], function () {
                     // must be authenticated user and verified
-
         Route::get('profile',function(){
-
             return 'You Are Authenticated ';
         });
     });
 
     Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
         // must be authenticated user
-
         Route::post('verify-user/', 'VerificationCodeController@verify') -> name('verify-user');
-
-
+        Route::get('verify','VerificationCodeController@getVerifyPage') -> name('get.verification.form');
     });
 
-    Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
-
-            //guest  user
-    });
-    Route::get('verify',function (){
-        return view('auth.verification');
-    });
 });
 
 

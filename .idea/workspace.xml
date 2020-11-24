@@ -20,14 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/VerificationCodeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/VerificationRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verification.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/SliderImagesRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Slider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_27_191506_create_sliders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/VerificationCodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/VerificationCodeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/VerificationServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/VerificationServices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header-bottom.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header-bottom.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header-top.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,19 +190,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Site" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\front" />
       <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Auth" />
-      <recent name="C:\wamp64\www\ecommerce\resources\views\auth" />
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Services\SMSGateways" />
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Services" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\sliders" />
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\sliders\images" />
       <recent name="C:\wamp64\www\ecommerce\public\assets\front\css" />
       <recent name="C:\wamp64\www\ecommerce\public\assets\admin\js\scripts\extensions" />
     </key>
@@ -270,7 +283,13 @@
       <workItem from="1605124759321" duration="4624000" />
       <workItem from="1605355876308" duration="603000" />
       <workItem from="1605357165267" duration="11922000" />
-      <workItem from="1605553781589" duration="6050000" />
+      <workItem from="1605553781589" duration="6717000" />
+      <workItem from="1605646887596" duration="1671000" />
+      <workItem from="1605870754809" duration="12816000" />
+      <workItem from="1606029903445" duration="2229000" />
+      <workItem from="1606076530330" duration="410000" />
+      <workItem from="1606157163562" duration="9527000" />
+      <workItem from="1606207098154" duration="298000" />
     </task>
     <servers />
   </component>
@@ -315,10 +334,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="459" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1600524712059" />
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1605554088849">
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606076936753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1605554088849" />
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1606076936753" />
     <state x="24" y="45" width="1052" height="715" key="dock-window-1" timestamp="1604691768827">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -327,10 +346,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1603564781363" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602452945787">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606049191553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602452945787" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606049191553" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

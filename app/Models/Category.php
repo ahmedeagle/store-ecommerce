@@ -4,6 +4,7 @@ namespace App\Models;
 use Astrotomic\Translatable\Translatable;
 
 use Illuminate\Database\Eloquent\Model;
+use phpDocumentor\Reflection\Types\Self_;
 
 class Category extends Model
 {
@@ -60,6 +61,16 @@ class Category extends Model
 
     public function scopeActive($query){
         return $query -> where('is_active',1) ;
+    }
+
+    //get all childrens=
+    public function childrens(){
+        return $this -> hasMany(Self::class,'parent_id');
+    }
+
+    public function products()
+    {
+        return $this -> belongsToMany(Product::class,'product_categories');
     }
 
 }

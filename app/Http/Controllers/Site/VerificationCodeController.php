@@ -18,16 +18,18 @@ class VerificationCodeController extends Controller
 
     public function verify(VerificationRequest $request)
     {
-
         $check = $this ->  verificationService -> checkOTPCode($request -> code);
-
         if(!$check){  // code not correct
-
-            return 'you enter wrong code ';
-
+          //  return 'you enter wrong code ';
+            return redirect() -> route('get.verification.form')-> withErrors(['code' => 'ألكود الذي ادخلته غير صحيح ']);
         }else {  // verifiction code correct
-
+            $this ->  verificationService -> removeOTPCode($request -> code);
             return redirect()->route('home');
         }
+    }
+
+    public function getVerifyPage()
+    {
+        return view('auth.verification') ;
     }
 }
