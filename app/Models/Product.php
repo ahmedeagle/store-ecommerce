@@ -25,7 +25,7 @@ class Product extends Model
      */
     protected $fillable = [
         'brand_id',
-         'slug',
+        'slug',
         'sku',
         'price',
         'special_price',
@@ -68,10 +68,10 @@ class Product extends Model
      *
      * @var array
      */
-   /* protected $appends = [
-        'base_image', 'formatted_price', 'rating_percent', 'is_in_stock', 'is_out_of_stock',
-        'is_new', 'has_percentage_special_price', 'special_price_percent',
-    ];*/
+    /* protected $appends = [
+         'base_image', 'formatted_price', 'rating_percent', 'is_in_stock', 'is_out_of_stock',
+         'is_new', 'has_percentage_special_price', 'special_price_percent',
+     ];*/
 
     /**
      * The attributes that are translatable.
@@ -85,8 +85,9 @@ class Product extends Model
         return $this->belongsTo(Brand::class)->withDefault();
     }
 
-    public function getActive(){
-        return  $this -> is_active  == 0 ?  'غير مفعل'   : 'مفعل' ;
+    public function getActive()
+    {
+        return $this->is_active == 0 ? 'غير مفعل' : 'مفعل';
     }
 
     public function categories()
@@ -94,8 +95,9 @@ class Product extends Model
         return $this->belongsToMany(Category::class, 'product_categories');
     }
 
-   public function scopeActive($query){
-        return $query -> where('is_active',1);
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', 1);
     }
 
     public function tags()
@@ -105,6 +107,16 @@ class Product extends Model
 
     public function options()
     {
-        return $this->hasMany(Option::class,'product_id');
+        return $this->hasMany(Option::class, 'product_id');
     }
+
+    //////
+    ///
+
+    public function images()
+    {
+        return $this->hasMany(Image::class, 'product_id');
+    }
+
+
 }
