@@ -19,28 +19,33 @@ Route::group([
 ], function () {
 
 
-
-    Route::group(['namespace' => 'Site', 'middleware' => 'guest'], function () {
+    Route::group(['namespace' => 'Site'/*, 'middleware' => 'guest'*/], function () {
         //guest  user
-        route::get('/','HomeController@home') -> name('home') -> middleware('VerifiedUser');
-        route::get('category/{slug}','CategoryController@productsBySlug') ->name('category');
+        route::get('/', 'HomeController@home')->name('home')->middleware('VerifiedUser');
+        route::get('category/{slug}', 'CategoryController@productsBySlug')->name('category');
 
     });
 
 
-    Route::group(['namespace' => 'Site', 'middleware' => ['auth','VerifiedUser']], function () {
-                    // must be authenticated user and verified
-        Route::get('profile',function(){
+    Route::group(['namespace' => 'Site', 'middleware' => ['auth', 'VerifiedUser']], function () {
+        // must be authenticated user and verified
+        Route::get('profile', function () {
             return 'You Are Authenticated ';
         });
     });
 
     Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
         // must be authenticated user
-        Route::post('verify-user/', 'VerificationCodeController@verify') -> name('verify-user');
-        Route::get('verify','VerificationCodeController@getVerifyPage') -> name('get.verification.form');
+        Route::post('verify-user/', 'VerificationCodeController@verify')->name('verify-user');
+        Route::get('verify', 'VerificationCodeController@getVerifyPage')->name('get.verification.form');
     });
 
 });
 
+Route::group(['namespace' => 'Site', 'middleware' => 'auth'], function () {
 
+    Route::post('wishlist', 'WishlistController@store')->name('wishlist.store');
+
+    Route::delete('wishlist/{productId}', 'WishlistController@destroy')->name('wishlist.destroy');
+    Route::get('wishlist/products', 'WishlistProductController@index')->name('wishlist.products.index');
+});

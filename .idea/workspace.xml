@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/front/includes/not-logged.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/products/xnUByxWbbJG7ar3oSak6xbsLLvsLjqJulrR4G9g0.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,22 +175,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Site" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front/includes" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
-      <recent name="C:\wamp64\www\ecommerce\resources\views\front" />
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
-      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\sliders" />
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Dashboard" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\sliders\images" />
       <recent name="C:\wamp64\www\ecommerce\public\assets\front\css" />
       <recent name="C:\wamp64\www\ecommerce\public\assets\admin\js\scripts\extensions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommerce\resources\views\front\includes" />
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\front" />
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\sliders" />
     </key>
   </component>
   <component name="RunManager">
@@ -276,7 +275,8 @@
       <workItem from="1606076530330" duration="410000" />
       <workItem from="1606157163562" duration="9527000" />
       <workItem from="1606207098154" duration="298000" />
-      <workItem from="1606489140269" duration="8099000" />
+      <workItem from="1606489140269" duration="8909000" />
+      <workItem from="1606569000868" duration="13273000" />
     </task>
     <servers />
   </component>
@@ -321,18 +321,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="459" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1600524712059" />
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606076936753">
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606572227695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1606076936753" />
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1606572227695" />
     <state x="24" y="45" width="1052" height="715" key="dock-window-1" timestamp="1604691768827">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="24" y="45" width="1052" height="715" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1604691768827" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1603564781363">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1606591647726">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1603564781363" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606591647726" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606049191553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -355,6 +355,10 @@
           <url>file://$PROJECT_DIR$/resources/views/dashboard/options/create.blade.php</url>
           <line>56</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/front/includes/product-details.blade.php</url>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
