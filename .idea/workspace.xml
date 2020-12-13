@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b134b86-7e80-4984-8d97-ecf299974f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/front/includes/not-logged.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/includes/alert.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/includes/alert2.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/wishlists.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/WishlistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/WishlistController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/includes/header-center.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/includes/header-center.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,8 +189,8 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommerce\resources\views\front\includes" />
-      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\front" />
+      <recent name="C:\wamp64\www\ecommerce\app\Http\Controllers\Site" />
       <recent name="C:\wamp64\www\ecommerce\app\Http\Requests" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\sliders" />
     </key>
@@ -276,7 +278,11 @@
       <workItem from="1606157163562" duration="9527000" />
       <workItem from="1606207098154" duration="298000" />
       <workItem from="1606489140269" duration="8909000" />
-      <workItem from="1606569000868" duration="13273000" />
+      <workItem from="1606569000868" duration="13508000" />
+      <workItem from="1606634000446" duration="578000" />
+      <workItem from="1606735966004" duration="628000" />
+      <workItem from="1607884304411" duration="1266000" />
+      <workItem from="1607886178553" duration="3274000" />
     </task>
     <servers />
   </component>
@@ -297,10 +303,6 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1598617808483">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598617808483" />
     <state x="397" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600524676989">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -309,10 +311,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="354" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1603563115582" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605558922377">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607885266699">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605558922377" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607885266699" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1603619337855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -321,10 +323,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="459" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1600524712059" />
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606572227695">
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1607886206764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1606572227695" />
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1607886206764" />
     <state x="24" y="45" width="1052" height="715" key="dock-window-1" timestamp="1604691768827">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
