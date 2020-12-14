@@ -93,7 +93,7 @@
                                                      data-id-product="22" data-id-product-attribute="408" itemscope=""
                                                      itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
-                                                        <a href="audio/22-408-aenean-porta-ligula-egestas-east.html#/1-size-s/10-color-red"
+                                                        <a href="{{route('product.details',$product -> slug)}}"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
                                                                  src="{{$product -> images[0] -> photo ?? ''}}"
@@ -139,7 +139,7 @@
                                                             </div>
 
                                                             <div class="product-title" itemprop="name"><a
-                                                                    href="">{{$product -> name}}</a></div>
+                                                                    href="{{route('product.details',$product -> slug)}}">{{$product -> name}}</a></div>
 
                                                             <div class="product-group-price">
                                                                 <div class="product-price-and-shipping">
@@ -239,6 +239,7 @@
 
             $('.not-loggedin-modal').css("display", "none");
             $('.alert-modal').css("display", "none");
+            $('.alert-modal2').css("display", "none");
         });
         $.ajaxSetup({
             headers: {
@@ -261,7 +262,7 @@
                     'productId': $(this).attr('data-product-id'),
                 },
                 success: function (data) {
-                    if(data.wished)
+                    if(data.wished )
                     $('.alert-modal').css('display','block');
                     else
                         $('.alert-modal2').css('display','block');
