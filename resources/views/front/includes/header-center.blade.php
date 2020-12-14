@@ -3,7 +3,8 @@
     <div class="container">
         <div class="row d-flex align-items-center">
             <div id="_desktop_logo" class="contentsticky_logo d-flex align-items-center justify-content-start col-lg-3 col-md-3">
-                <a href="http://demo.bestprestashoptheme.com/savemart/">
+                <a href="{{route('home')}}">
+                    <img class="logo img-fluid" src="http://demo.bestprestashoptheme.com/savemart/modules/novthemeconfig/images/logos/logo-1.png" alt="Prestashop_Savemart">
                 </a>
             </div>
             <div class="col-lg-9 col-md-9 header-menu d-flex align-items-center justify-content-end">
@@ -21,7 +22,7 @@
                         <a class="login" href="login-1.html" rel="nofollow" title="Log in to your customer account"><i class="header-icon-account"></i></a>
                     </div>
                     <div class="header_link_wishlist">
-                        <a href="login-2.html" title="My Wishlists">
+                        <a href="{{route('wishlist.products.index')}}" title="My Wishlists">
                             <i class="header-icon-wishlist"></i>
                         </a>
                     </div>
