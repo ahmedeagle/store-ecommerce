@@ -68,10 +68,7 @@ class Product extends Model
      *
      * @var array
      */
-    /* protected $appends = [
-         'base_image', 'formatted_price', 'rating_percent', 'is_in_stock', 'is_out_of_stock',
-         'is_new', 'has_percentage_special_price', 'special_price_percent',
-     ];*/
+
 
     /**
      * The attributes that are translatable.
@@ -118,5 +115,26 @@ class Product extends Model
         return $this->hasMany(Image::class, 'product_id');
     }
 
+    public function hasStock($quantity)
+    {
+        return $this->qty >= $quantity;
+    }
+
+    public function outOfStock()
+    {
+        return $this->qty === 0;
+    }
+
+    public function inStock()
+    {
+        return $this->qty >= 1;
+    }
+
+
+public function getTotal($converted = true)
+    {
+        return $total =  $this->special_price ?? $this -> price;
+
+    }
 
 }

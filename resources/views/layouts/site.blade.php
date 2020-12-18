@@ -64,6 +64,7 @@
         }
     </style>
 
+    @yield('styles')
 </head>
 <body id="index" class="lang-en country-gb currency-gbp layout-full-width page-index tax-display-enabled">
 
