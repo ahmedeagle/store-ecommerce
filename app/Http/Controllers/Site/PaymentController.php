@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers\Site;
 
- use App\Http\Controllers\Controller;
+use App\Events\NewOrder;
+use App\Http\Controllers\Controller;
 
+use App\Models\Order;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use GuzzleHttp\Client;
 
@@ -24,7 +28,7 @@ class PaymentController extends Controller
 
     public function getPayments($amount)
     {
-        return view('front.cart.payments' ,compact('amount'));
+        return view('front.cart.payments', compact('amount'));
     }
 
     /**
@@ -58,7 +62,7 @@ class PaymentController extends Controller
         $ccMon = $ccExp[0];
         $ccYear = $ccExp[1];
         $customerMobile = strlen($phone) <= 11 ? $phone : '123456';
-         $data['Language'] = 'en';
+        $data['Language'] = 'en';
         $PaymentMethodId = $request->PaymentMethodId;
         $token = $this->token;
         $basURL = $this->base_url;
@@ -85,11 +89,10 @@ class PaymentController extends Controller
             ];
         }
 
-         $json = json_decode((string)$response, true);
+        $json = json_decode((string)$response, true);
         //echo "json  json: $json '<br />'";
 
         $payment_url = $json["Data"]["PaymentURL"];
-
 
 
         $card = new \stdClass();
@@ -122,13 +125,50 @@ class PaymentController extends Controller
 
         $json = json_decode((string)$response, true);
         $PaymentId = $json["Data"]["PaymentId"];
+        try {
+            DB::beginTransaction();
+            // if success payment save order and send realtime notification to admin
+            $order = $this->saveOrder($amount, $PaymentMethodId);  // your task is  . add products with options to order to preview on admin
+            $this->saveTransaction($order, $PaymentId);
+            DB::commit();
 
+            //fire event on order complete success for realtime notification
+            event(new NewOrder($order));
+
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            return $ex;
+        }
+        // replace return statment with message that tell the user that the payment successes
         return [
             'payment_success' => true,
             'token' => $PaymentId,
             'data' => $json,
             'status' => 'succeeded',
         ];
+    }
+
+    private function saveOrder($amount, $PaymentMethodId)
+    {
+        return Order::create([
+            'customer_id' => auth()->id(),
+            'customer_phone' => auth()->user()->mobile,
+            'customer_name' => auth()->user()->name,
+            'total' => $amount,
+            'locale' => 'en',
+            'payment_method' => $PaymentMethodId,  // you can use enumeration here as we use before for best practices for constants.
+            'status' => Order::PAID,
+        ]);
+
+    }
+
+    private function saveTransaction(Order $order, $PaymentId)
+    {
+        Transaction::create([
+            'order_id' => $order->id,
+            'transaction_id' => $PaymentId,
+            'payment_method' => $order->payment_method,
+        ]);
     }
 
 
