@@ -32,8 +32,6 @@ class ProductsController extends Controller
         $data['brands'] = Brand::active()->select('id')->get();
         $data['tags'] = Tag::select('id')->get();
         $data['categories'] = Category::active()->select('id')->get();
-
-
         return view('dashboard.products.general.create', $data);
     }
 
