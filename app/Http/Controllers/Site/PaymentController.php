@@ -19,6 +19,61 @@ class PaymentController extends Controller
     private $request_client;
     private $token;
 
+
+  public function fatoorah(){
+$token ='map7mmxHnVxraKXGDC3A9R-hJptVHKdEUflEC3wtz2Mrv80t5EEVMAybPbZwdIjTQy8dHwktUTxYFt8DsNr3sWtcjC36BqdRTbVWs3oQ9s_a9JhY1E5Xrtk5TdYNOBjDxa25HilsMRYBEiAZcGnt0jzMo-orvZSJ4EVNtK-NOMPUK9GQ5yrwclqCwAou0uERPnfrv8lm85AVROLOUmCklvgZ-2uAV7rGYmeqcToDNC-KV45_FPrI6P4X1B7R3dkj8vg9EJCKKKx7UGV2CVNNRH9D3RKAkskp2wLpTlBh0k9fWt1Xl0wKgvB3K9WjP8tBwaX3fkAsFvoVh_8EAZSovquUlDiaX-OQRi39V662jsSSIsNd9IL3MoUUvMTo4hyr-H-g2EEOBQjYuVy6fM5mD3VzBISndvJOtFuNh3xqxt9PJOshP00cwHTE3XjQjWsW2KoGhEtFdmgml7GLp3Ve1ndJ5LIGRWM7Cyj6dsY5Idks4h5JC-J5YphwD-6THn639vjQF2rNPp27fyIe9DwD5OAcr4EoSy_Nuof_Eq4xjYUhiTdwNnmgjUb4uu77PzjK54Mib7H0PJBK0hIJG9AlvIzsDQlU_VTMJrU2togZdGLWoDc06r8tuKZo75iX4vYGUrMT4OR_XVmR3hgKtdLLpBEFrGagGSgdt4enUv-sk_KgNjpC';
+$basURL = 'https://apitest.myfatoorah.com';
+
+          $curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "$basURL/v2/ExecutePayment",
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\"PaymentMethodId\":\"2\",\"CustomerName\": \"Ahmed\",\"DisplayCurrencyIso\": \"KWD\", \"MobileCountryCode\":\"+965\",\"CustomerMobile\": \"92249038\",\"CustomerEmail\": \"aramadan@myfatoorah.com\",\"InvoiceValue\": 100,\"CallBackUrl\": \"https://google.com\",\"ErrorUrl\": \"https://google.com\",\"Language\": \"en\",\"CustomerReference\" :\"ref 1\",\"CustomerCivilId\":12345678,\"UserDefinedField\": \"Custom field\",\"ExpireDate\": \"\",\"CustomerAddress\" :{\"Block\":\"\",\"Street\":\"\",\"HouseBuildingNo\":\"\",\"Address\":\"\",\"AddressInstructions\":\"\"},\"InvoiceItems\": [{\"ItemName\": \"Product 01\",\"Quantity\": 1,\"UnitPrice\": 100}]}",
+  CURLOPT_HTTPHEADER => array("Authorization: Bearer $token","Content-Type: application/json"),
+));
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+    return  "cURL Error #:" . $err;
+} else {
+return response() -> json($response);
+
+}
+
+ $json  = json_decode((string)$response, true);
+ //echo "json  json: $json '<br />'";
+
+$payment_url = $json["Data"]["PaymentURL"];
+
+    # after getting the payment url call it as a post API and pass card info to it
+    # if you saved the card info before you can pass the token for the api
+
+$curl = curl_init();
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "$payment_url",
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\"paymentType\": \"card\",\"card\": {\"Number\":\"5123450000000008\",\"expiryMonth\":\"05\",\"expiryYear\":\"21\",\"securityCode\":\"100\"},\"saveToken\": false}",
+  CURLOPT_HTTPHEADER => array("Authorization: Bearer $token","Content-Type: application/json"),
+));
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$response2 = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+   return  "cURL Error #:" . $err;
+} else {
+   // return 'dfdfdf';
+  return response() -> json($response2);
+}
+
+}
+
     public function __construct(Client $request_client)
     {
         $this->request_client = $request_client;
