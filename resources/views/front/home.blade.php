@@ -107,7 +107,7 @@
                             <div class="nov-productlist nov-countdown-productlist col-xl-4 col-lg-4 col-md-4  col-xs-12 col-md-12">
                                 <div class="block block-product clearfix">
                                     <h2 class="title_block">
-                                        FLASH DEALS
+                                        FLASH DEALS --
                                     </h2>
                                     <div class="block_content">
                                         <div id="productlist1326409273"

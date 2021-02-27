@@ -20,6 +20,7 @@
         "mcamara/laravel-localization": "^1.5",
         "pusher/pusher-php-server": "^4.1",
         "spatie/laravel-enum": "^1.6",
+        "spatie/laravel-multitenancy": "^1.0",
         "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {

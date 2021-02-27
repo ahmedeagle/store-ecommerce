@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9896fb1c-2ba5-4d16-8e57-10ab182e2b96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/RolesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/UsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AdminRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/RolesRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/roles/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/users/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/PaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/multitenancy.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/multitenancy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/landlord/2020_12_22_211639_create_landlord_tenants_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/landlord/2021_01_01_160139_create_landlord_tenants_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +32,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -151,6 +152,7 @@
       <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
       <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-multitenancy" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lf8RjyLy7VAxrYdy6vLqtt5duz" />
@@ -162,7 +164,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../emr" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -201,7 +203,23 @@
       <workItem from="1608936674142" duration="599000" />
       <workItem from="1608985997806" duration="1033000" />
       <workItem from="1608987042304" duration="193000" />
-      <workItem from="1608987248405" duration="13958000" />
+      <workItem from="1608987248405" duration="14746000" />
+      <workItem from="1609054012030" duration="610000" />
+      <workItem from="1609276020861" duration="2142000" />
+      <workItem from="1609336252599" duration="654000" />
+      <workItem from="1609355847666" duration="1503000" />
+      <workItem from="1609507103237" duration="10335000" />
+      <workItem from="1609532322633" duration="2009000" />
+      <workItem from="1609665214889" duration="8000" />
+      <workItem from="1610886975402" duration="597000" />
+      <workItem from="1610980192684" duration="598000" />
+      <workItem from="1611043855305" duration="600000" />
+      <workItem from="1611063200553" duration="628000" />
+      <workItem from="1611071309814" duration="614000" />
+      <workItem from="1611127141573" duration="442000" />
+      <workItem from="1611351425117" duration="685000" />
+      <workItem from="1611354631726" duration="94000" />
+      <workItem from="1611427526307" duration="97000" />
     </task>
     <servers />
   </component>

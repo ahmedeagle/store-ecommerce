@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
@@ -21,6 +23,7 @@ Route::group([
 
     Route::group(['namespace' => 'Site'/*, 'middleware' => 'guest'*/], function () {
         //guest  user
+Route::get('fat','PaymentController@fatoorah');
         route::get('/', 'HomeController@home')->name('home')->middleware('VerifiedUser');
         route::get('category/{slug}', 'CategoryController@productsBySlug')->name('category');
         route::get('product/{slug}', 'ProductController@productsBySlug')->name('product.details');
